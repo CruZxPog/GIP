@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* Set body margin and padding to 0 to remove default spacing */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Style the buttons */
+      button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #ddd;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Style the links inside the buttons */
+      a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 24px;
+        line-height: 100vh;
+      }
+
+      /* Style the left button */
+      .left {
+        left: 0;
+        background-color: green;
+      }
+
+      /* Style the right button */
+      .right {
+        right: 0;
+        background-color: blue;
+      }
+
+      /* Add a hover effect to the buttons */
+      button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create two buttons that split the screen horizontally -->
+    <button class="left"><a href="admin/admin.html">admin page</a></button>
+    <button class="right"><a href="setup.html">setup page</a></button>
+  </body>
+</html>
