@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Bebas Neue", cursive;
+  font-size: large;
+}
+
+.parent {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.username-text-field {
+  padding: 10px;
+}
+
+.username-input {
+  width: 55.1vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+.username-errase {
+  width: 5vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
+}
+
+.button-row {
+  padding: 10px;
+}
+
+.button {
+  width: 20vw;
+  height: 10vh;
+  border-radius: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
+}
