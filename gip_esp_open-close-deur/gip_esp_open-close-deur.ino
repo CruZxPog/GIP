@@ -2,12 +2,10 @@
 #include <HTTPClient.h>
 // #include <Preferences.h>
 
-const char* ssid = "Tuganet-2";
-const char* password = "56353044";
-String name;
-String naam;
+const char* ssid = "WIFIIICT";
+const char* password = "fakatijger";
 //Your Domain name with URL path or IP address with path
-String serverName = "http://192.168.0.170/gip/login/doorstatus.php";
+String serverName = "http://10.3.41.25/gip/gip/login/doorstatus.php";
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
@@ -27,12 +25,6 @@ void setup() {
 
   Serial.begin(115200); 
 
-  // preferences.begin("my-app", false); // Open the preferences with the app name "my-app"
- 
-  // Read the name from preferences, or set it to "unknown" if it's not found
-//  name = preferences.getString("name", "unknown");
- 
-//  Serial.print(name);
   WiFi.begin(ssid, password);
   Serial.println("Connecting");
   while(WiFi.status() != WL_CONNECTED) {
@@ -60,9 +52,6 @@ void loop() {
     //Check WiFi connection status
     if(WiFi.status()== WL_CONNECTED){
       HTTPClient http;
-
-      // Serial.print("name ");
-      // Serial.println(name);
 
       String serverPath = serverName + "?naam="+chipid();
       

@@ -3,8 +3,14 @@ $link = mysqli_connect("localhost","root","","locks");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $voornaam = $_POST['voornaam'];
+    $voornaam =strtolower($voornaam);
+
     $achternaam =$_POST['achternaam'];
+    $achternaam =strtolower($achternaam);
+
     $username = $_POST['username'];
+    $username = strtolower($username);
+    
     $password = $_POST['password'];
     $rank = $_POST['rank'];
 

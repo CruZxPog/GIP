@@ -5,8 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // print_r($_POST);
 
     $username = $_POST['username'];
+    $username = strtolower($username);
     $password = $_POST['pass'];
     $deurnaam_cookie = $_COOKIE['deurnaam'];
+    $deurnaam_cookie = strtolower($deurnaam_cookie);
     $deurrank_cookie = $_COOKIE['deurrank'];
     
     $sanitized_username = 

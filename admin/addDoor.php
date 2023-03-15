@@ -3,6 +3,8 @@ $link = mysqli_connect("localhost","root","","locks");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $deurnaam = $_POST['deurnaam'];
+    $deurnaam =strtolower($deurnaam);
+    
     $rank = $_POST['rank'];
 
     $sql = "INSERT INTO `doors`(`deur naam`, `status`,`rank`,`chipid`) VALUES ('$deurnaam','close',$rank,'')";

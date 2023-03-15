@@ -27,8 +27,8 @@
     <script>
       function setCookies() {
         // Get the values of the input and select fields
-        let deurnaamValue = document.getElementById("deurnaam").value;
-        let deurrankValue = document.getElementById("deurrank").value;
+        let deurnaamValue = document.getElementById("deurnaam").value.toLowerCase();
+        let deurrankValue = document.getElementById("deurrank").value.toLowerCase();
 
         // Set the cookies with the values
         document.cookie = "deurnaam=" + encodeURIComponent(deurnaamValue);

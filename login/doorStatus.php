@@ -1,8 +1,8 @@
 <?php
 $link = mysqli_connect("localhost", "root", "", "locks");
 
-$chipid = mysqli_real_escape_string($link, $_GET["name"]);
-
+$chipid = mysqli_real_escape_string($link, $_GET["naam"]);
+// echo $chipid;
 // Controleer of $chipid niet leeg is
 if (!empty($chipid)) {
 
@@ -10,7 +10,7 @@ if (!empty($chipid)) {
     $sql = "SELECT COUNT(*) FROM doors WHERE `chipid` = '$chipid'";
     $result = mysqli_query($link, $sql) or die(mysqli_error($link));
     $count = mysqli_fetch_array($result)[0];
-
+    
     if ($count > 0) { // Als $chipid al in de tabel bestaat
 
         // Haal de status op van de deur met de gegeven $chipid
@@ -24,9 +24,11 @@ if (!empty($chipid)) {
     } else { // Als $chipid niet bestaat in de tabel
 
         // Voeg het nieuwe $chipid toe aan de tabel
-        $sql = "INSERT INTO `doors` (`chipid`) VALUES ('$chipid')";
+        $sql = "UPDATE `doors` SET `chipid`='$chipid' WHERE `chipid` = '' LIMIT 1";
         mysqli_query($link, $sql) or die(mysqli_error($link));
-
+        
     }
+} else {
+    // header('Location: scramblepad.html');
 }
 ?>
