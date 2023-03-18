@@ -1,104 +1,50 @@
-<!-- index.php -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap core CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="scramblepad-style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <title>Log In</title>
+    <title>test page for scramblepad</title>
   </head>
-  <body
-    class="px-5"
-    style="
-      overflow: hidden;
-      font-family: 'Bebas Neue', cursive;
-      font-size: 120px;
-    "
-  >
-    <form action="./verify" method="post">
-      <!-- Maak een roster van 10 toetsen voor het keypad -->
-
-      <div class="containers">
+  <body>
+    <div class="parent">
+      <form action="" method="post">
         <input type="hidden" name="pass" id="pass" value="" required />
-        <div class="input-group input-group-lg mb-1">
-          <input
-            type="text"
-            name="username"
-            id="username"
-            class="form-control"
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="Username"
-            required
-          />
+        <div class="username-text-field">
+          <input class="username-input border" type="text" />
         </div>
-        <div
-          class="btn-group btn-group-sm w-100 h-25 mb-1"
-          role="group"
-          aria-label="Large button group"
-        >
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
+        <div class="button-row">
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
         </div>
-        <br />
-        <div
-          class="btn-group btn-group-sm w-100 h-25 mb-1"
-          role="group"
-          aria-label="Large button group"
-        >
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
+        <div class="button-row">
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
         </div>
-        <br />
-        <div
-          class="btn-group btn-group-sm w-100 h-25 mb-1"
-          role="group"
-          aria-label="Large button group"
-        >
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="button" class="btn btn-outline-dark"></button>
+        <div class="button-row">
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
+          <button class="button border" type="button"></button>
         </div>
-        <br />
-        <div
-          class="btn-group btn-group-sm w-100 h-25 mb-1"
-          role="group"
-          aria-label="Large button group"
-        >
-          <button type="button" class="btn btn-outline-dark">❌</button>
-          <button type="button" class="btn btn-outline-dark"></button>
-          <button type="submit" class="btn btn-outline-dark">✔</button>
+        <div class="button-row">
+          <button class="button border no-invert ❌" type="button">❌</button>
+          <button class="button border" type="button"></button>
+          <button class="button border no-invert ✔" type="submit">✔</button>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
 </html>
 
 <script>
-  /*
-  Deze functie wordt gebruikt om de array willekeurig te maken met behulp van de shuffleArray-functie 
-  in deze array gebruiken we .sort(() => Math.random() - 0.5)
-  'Math.random() - 0.5' retourneert een willekeurig floatgetal tussen -0.5 en 0.49999. 
-  De sort() methond vergelijkt de waarden die door de functie worden geretourneerd om de sorteervolgorde te bepalen. 
-  Aangezien de functie willekeurige getallen tussen -0,5 en 0,5 retourneert, 
-  worden de elementen van de array in willekeurige volgorde gesorteerd
- */
   function shuffleArray(arr) {
-    // if (typeof arr == 'undefined') return
     arr.sort(() => Math.random() - 0.5);
   }
 
@@ -107,42 +53,22 @@
 
   getKeys();
 
-  //Deze functie wordt gebruikt om de "buttons" hun waarde te geven
   function getKeys() {
     let key = 0;
-    //hier selecteren we alle elementen van het type "button"
-    //een voor elke element
     document.querySelectorAll('button[type="button"]').forEach((element) => {
-      //checken we voor als het de juiste buttons zijn is
-
       if (element.textContent == "❌") return;
-      // als die het niet is dan geven we 1 van de nummers in de array
-      //dat we er voor all hebben gesorteerd in de shuffleArray functie
       element.textContent = arr[key];
-      //dan verhogen we "key" voor de volgende waarde
       key++;
     });
   }
 
-  //deze code voegt een eventListener aan de form (form is de pagina, eventListener is om te zien als iets gebeurt)
-  //we gebruiken een 'click' eventListener om dan de rest van de code te roepen wanneer iets wordt geclicked
   document.querySelector("form").addEventListener("click", (event) => {
-    //Deze code controleert of de tekstinhoud van het "event.target" element gelijk is aan("✔").
-    //Als dit zo is, keert de functie terug zonder verdere code uit te voeren.
-    //Als de tekstinhoud niet gelijk is aan het vinkje,
-    //gaat de functie verder met uitvoeren.
     if (event.target.textContent == "✔") return;
-    //deze code doet het zelfde als de code hier boven maar
-    //als het gelijk is aan ❌ dan wijzigt je wat dat de gebruiker heeft er voor ingegeven
     if (event.target.textContent == "❌") {
       document.getElementById("pass").value = "";
       return;
     }
-    //als het geen van bijde is dan voert de code dit uit
-    //hier staat dat de element met id pass dit element is een onzichtbare inputbox van type text
-    //dat we in de html hier boven hebben gemaakt waar we de geclicked nummers er in schrijven
     document.getElementById("pass").value += event.target.textContent;
-    //roep de functie shuffleArray en getKeys voor een nieuwe set van random nummers
     shuffleArray(arr);
     getKeys();
   });
