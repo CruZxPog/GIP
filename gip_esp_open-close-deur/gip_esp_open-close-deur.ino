@@ -5,7 +5,7 @@
 const char* ssid = "WIFIIICT";
 const char* password = "fakatijger";
 //Your Domain name with URL path or IP address with path
-String serverName = "http://10.3.41.25/gip/gip/login/doorstatus.php";
+String serverName = "http://10.3.41.25/gip/gip/login/doorStatus.php";
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
@@ -14,14 +14,11 @@ unsigned long lastTime = 0;
 //unsigned long timerDelay = 600000;
 // Set timer to 5 seconds (5000)
 unsigned long timerDelay = 1000;
-const int redled = 12;
-const int greenled = 13;
+const int slot = 21;
 // Preferences preferences;
 
 void setup() {
-  pinMode(redled, OUTPUT);
-  pinMode(greenled, OUTPUT);
-  digitalWrite(redled,HIGH);
+  pinMode(slot, OUTPUT);
 
   Serial.begin(115200); 
 
@@ -38,22 +35,19 @@ void setup() {
   Serial.println("Timer set to 5 seconds (timerDelay variable), it will take 5 seconds before publishing the first reading.");
 }
 
-char *chipid() {
-  uint64_t chipid = ESP.getEfuseMac();
-  char chipid_str[17];
-  sprintf(chipid_str, "%016llX", chipid);
-  return chipid_str;
-}
-
-
 void loop() {
   //Send an HTTP POST request every 10 minutes
   if ((millis() - lastTime) > timerDelay) {
     //Check WiFi connection status
     if(WiFi.status()== WL_CONNECTED){
       HTTPClient http;
+      
+      uint64_t chipid = ESP.getEfuseMac();
+      char chipid_str[17];
+      sprintf(chipid_str, "%016llX", chipid);
 
-      String serverPath = serverName + "?naam="+chipid();
+      String serverPath = serverName + "?naam="+chipid_str;
+      Serial.println(serverPath);
       
       // Your Domain name with URL path or IP address with path
       http.begin(serverPath.c_str());
@@ -70,12 +64,10 @@ void loop() {
         //check payload (door status)
         if (payload == "open" ) {
           //open door
-          digitalWrite(redled,LOW);
-          digitalWrite(greenled,HIGH);
+          digitalWrite(slot,HIGH);
         } else if (payload == "close") {
           //close door
-          digitalWrite(greenled,LOW);
-          digitalWrite(redled,HIGH);
+          digitalWrite(slot,LOW);
         } 
         
       } else {

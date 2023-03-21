@@ -13,26 +13,40 @@
   </head>
   <body>
     <div class="parent">
-      <form action="" method="post">
+      <form action="verify.php" method="post">
         <input type="hidden" name="pass" id="pass" value="" required />
+
         <div class="username-text-field">
-          <input class="username-input border" type="text" />
+          <input
+            class="username-input border"
+            name="username"
+            id="username"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="Username"
+            type="text"
+            required
+          />
         </div>
+
         <div class="button-row">
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
         </div>
+
         <div class="button-row">
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
         </div>
+
         <div class="button-row">
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
           <button class="button border" type="button"></button>
         </div>
+
         <div class="button-row">
           <button class="button border no-invert ❌" type="button">❌</button>
           <button class="button border" type="button"></button>
