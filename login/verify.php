@@ -6,17 +6,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST['username'];
     $username = strtolower($username);
-    $password = $_POST['pass'];
+    $password = $_POST['password'];
     $deurnaam_cookie = $_COOKIE['deurnaam'];
     $deurnaam_cookie = strtolower($deurnaam_cookie);
     $deurrank_cookie = $_COOKIE['deurrank'];
-    
     $sanitized_username = 
         mysqli_real_escape_string($link, $username);
         //mysqli_real_escape_string functie neemt de speciale tekens als text en beschouwt ze niet als querygebruik.
     $sanitized_password = 
         mysqli_real_escape_string($link, $password);
-        
+   
     $sql = "SELECT `rank` FROM `users` WHERE `username`= '$sanitized_username' and `password`= '$sanitized_password'";
         
     $result = mysqli_query($link, $sql) 
@@ -28,22 +27,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ?>
         <body id="background" style="background-color: rgb(19, 136, 8) ">
         <?php
-           $sql = "UPDATE `doors` SET `status`='open' WHERE  `deur naam`='$deurnaam_cookie'";
+           $sql = "UPDATE 'doors' SET 'status'='open' WHERE  'deur naam'='$deurnaam_cookie'";
            $result = mysqli_query($link, $sql) 
            or die(mysqli_error($link));
+           $affected_rows = mysqli_affected_rows($link);
         ?>
         </body>
         <script>
             window.addEventListener("load", () => {
                 const background = document.getElementById("background")
-                let time = 7
+                let time = 15
                 const interval = setInterval(() => {
                     time--
-                    if (time == 2) {
+                    console.log(time)
+                    if (time == 7) {
                         <?php
-                          $sql = "UPDATE `doors` SET `status`='close' WHERE `deur naam`='$deurnaam_cookie'";
+                          $sql = "UPDATE 'doors' SET 'status'='close' WHERE 'deur naam'='$deurnaam_cookie'";
                           $result = mysqli_query($link, $sql) 
                           or die(mysqli_error($link));
+                          $affected_rows = mysqli_affected_rows($link);
                         ?>
                         background.style.backgroundColor = "rgb( 219, 0, 7)"
                     } 

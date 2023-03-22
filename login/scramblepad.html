@@ -14,7 +14,7 @@
   <body>
     <div class="parent">
       <form action="verify.php" method="post">
-        <input type="hidden" name="pass" id="pass" value="" required />
+        <input type="text" name="password" id="password" value="" required />
 
         <div class="username-text-field">
           <input
@@ -79,10 +79,10 @@
   document.querySelector("form").addEventListener("click", (event) => {
     if (event.target.textContent == "✔") return;
     if (event.target.textContent == "❌") {
-      document.getElementById("pass").value = "";
+      document.getElementById("password").value = "";
       return;
     }
-    document.getElementById("pass").value += event.target.textContent;
+    document.getElementById("password").value += event.target.textContent;
     shuffleArray(arr);
     getKeys();
   });
