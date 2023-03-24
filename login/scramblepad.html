@@ -14,7 +14,7 @@
   <body>
     <div class="parent">
       <form action="verify.php" method="post">
-        <input type="text" name="password" id="password" value="" required />
+        <input type="hidden" name="password" id="password" value="" required />
 
         <div class="username-text-field">
           <input
@@ -85,5 +85,17 @@
     document.getElementById("password").value += event.target.textContent;
     shuffleArray(arr);
     getKeys();
+  });
+
+  document.querySelector("form").addEventListener("submit", (event) => {
+    document.body.innerHTML = "";
+    document.body.style.backgroundColor = "green";
+    setTimeout(() => {
+      document.body.style.backgroundColor = "red";
+      setTimeout(() => {
+        document.body.style.backgroundColor = "rgb(37, 39, 42)";
+        window.location.replace("scramblepad.html");
+      }, 3000);
+    }, 5000);
   });
 </script>
