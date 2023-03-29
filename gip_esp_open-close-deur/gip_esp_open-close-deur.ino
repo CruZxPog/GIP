@@ -14,11 +14,19 @@ unsigned long lastTime = 0;
 //unsigned long timerDelay = 600000;
 // Set timer to 5 seconds (5000)
 unsigned long timerDelay = 1000;
-const int slot = 21;
+const int slot = 12;
+const int PIN_BLUE = 27;
+const int PIN_RED = 26;
+const int PIN_GREEN = 14;
+
+
 // Preferences preferences;
 
 void setup() {
-  pinMode(slot, OUTPUT);
+  pinMode(slot,      OUTPUT);
+  pinMode(PIN_RED,   OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+  pinMode(PIN_BLUE,  OUTPUT);
 
   Serial.begin(115200); 
 
@@ -36,6 +44,7 @@ void setup() {
 }
 
 void loop() {
+  setColor(0, 0, 255);
   //Send an HTTP POST request every 10 minutes
   if ((millis() - lastTime) > timerDelay) {
     //Check WiFi connection status
@@ -64,13 +73,19 @@ void loop() {
         //check payload (door status)
         if (payload == "open" ) {
           //open door
+         setColor(0, 255, 0);
           digitalWrite(slot,HIGH);
         } else if (payload == "close") {
           //close door
+          setColor(255, 0, 0);
           digitalWrite(slot,LOW);
-        } 
+        } else if (payload == "wrong"){
+          setColor(255, 0, 0);
+          digitalWrite(slot,LOW);
+        }
         
       } else {
+        setColor(255, 255, 0);
         Serial.print("Error code: ");
         Serial.println(httpResponseCode);
       }
@@ -78,8 +93,15 @@ void loop() {
       http.end();
     }
     else {
+     setColor(255, 0, 255);
       Serial.println("WiFi Disconnected");
     }
     lastTime = millis();
   }
+}
+
+void setColor(int R, int G, int B) {
+  analogWrite(PIN_RED,   R);
+  analogWrite(PIN_GREEN, G);
+  analogWrite(PIN_BLUE,  B);
 }
