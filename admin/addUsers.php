@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 const interval = setInterval(() => {
                     time--
                     if(time == 0) {
-                        window.location.replace("admin.html")
+                        window.location.replace("index.html")
                         clearInterval(interval)
                     }
                 },1000)
