@@ -4,93 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index-style.css" />
     <title>Home Page</title>
-    <style>
-      /* Set body margin and padding to 0 to remove default spacing */
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      /* Style the buttons */
-      button {
-        height: 100%;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        font-size: 2em;
-        font-weight: bold;
-        color: white;
-        background-color: transparent;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      }
-
-      /* Style the links inside the buttons */
-      a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* Center the text inside the button and allow clicking anywhere */
-      button a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-      }
-
-      /* Center the link text inside each button */
-      .left a,
-      .right a {
-        display: flex;
-        justify-content: center;
-      }
-
-      /* Style the left button */
-      .left {
-        width: 50%;
-        float: left;
-        background-color: green;
-      }
-
-      /* Style the right button */
-      .right {
-        width: 50%;
-        float: right;
-        background-color: blue;
-      }
-
-      /* Add a hover effect to the buttons */
-      button:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Adjust hover effect on the left button */
-      .left:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Position the button container */
-      .container {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
   </head>
   <body>
     <!-- Create a container for the buttons -->
     <div class="container">
       <!-- Create two buttons that split the screen horizontally -->
-      <button class="left"><a href="admin/index.html">admin page</a></button>
-      <button class="right"><a href="setup.html">setup page</a></button>
+      <!-- Create two buttons that split the screen horizontally -->
+      <!-- <button class="left">
+        <a href="admin/index.html"><img src="img/admin2.png" alt="Admin" /></a>
+      </button>
+      <button class="right">
+        <a href="setup/setup.php"><img src="img/setup.png" alt="Setup" /></a>
+      </button> -->
+
+      <!-- Create two buttons that split the screen horizontally -->
+      <button class="left">
+        <a href="admin/index.html"><span>Admin</span></a>
+      </button>
+      <button class="right">
+        <a href="setup/setup.php"><span>Setup</span></a>
+      </button>
     </div>
   </body>
 </html>
