@@ -52,11 +52,10 @@ form button {
 }
 
 .in-use {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.788);
   color: white;
 }
 
-.container {
-  position: relative;
-  overflow: hidden;
+#print-btn {
+  display: none;
 }
