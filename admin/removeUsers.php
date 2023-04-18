@@ -17,13 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <script>
     window.addEventListener("load", () => {
-                let time = 1
-                const interval = setInterval(() => {
-                    time--
-                    if(time == 0) {
-                        window.location.replace("index.html")
-                        clearInterval(interval)
-                    }
-                },1000)
-            })
+        let time = 1
+        const interval = setInterval(() => {
+        time--
+            if(time == 0) {
+                window.location.replace("index.html")
+                clearInterval(interval)
+            }
+        },1000)
+    })
 </script>
