@@ -71,7 +71,7 @@ button a {
 .left {
   width: 50%;
   float: left;
-  background-image: url("img/admin2.png");
+  background-image: url("img/admin3.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -79,7 +79,7 @@ button a {
 .right {
   width: 50%;
   float: right;
-  background-image: url("img/setup.png");
+  background-image: url("img/scramblepad.png");
   background-position: center;
   background-repeat: no-repeat;
 }
