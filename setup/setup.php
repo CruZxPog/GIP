@@ -49,7 +49,7 @@
         $link->close();
       ?>
 
-      <button type="submit" id="submit">Submit</button>
+      <button type="button" id="submit" onclick="setCookies();">Submit</button>
 
       <button type="button" id="generateQRCode">Generate QR Code</button>
       <div id="qr-container">

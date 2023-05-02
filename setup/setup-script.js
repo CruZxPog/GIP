@@ -30,7 +30,8 @@ generateQRCode.addEventListener("click", function () {
 
   // Generate the URL with the cookie values
   //let qrURL = `http://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=http%3A%2F%2F${ipAddress}%2Fset_qrCookies.html%3Fdeurnaam%3D${deurnaamValue}%26deurrank%3D${deurrankValue}`;
-  let qrURL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${ipAddress}%2Fset_qrCookies.html%3Fdeurnaam%3D${deurnaamValue}%26deurrank%3D${deurrankValue}`;
+  ///GIP/GIP/setup/set_qrCookies.html
+  let qrURL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${ipAddress}%2FGIP%2FGIP%2Fsetup%2Fset_qrCookies.php%3Fdeurnaam%3D${deurnaamValue}%26deurrank%3D${deurrankValue}`;
   // Create a new image element with the QR code as the source
   let qrImage = document.createElement("img");
   qrImage.src = qrURL;
