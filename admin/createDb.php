@@ -4,7 +4,7 @@ $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'locks';
-$sql_file = 'C:\wamp64\www\GIP\GIP\admin\locks.sql';
+$sql_file = 'locks.sql';
 
 // Create connection
 $conn = mysqli_connect($host, $username, $password);
