@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a id="nav-icon" href="#"
+        ><img src="/img/scramblepad.png" alt="Home"
+      /></a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="createDb.php">Create DataBase</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="container-main">
+      <form action="addUsers.php" method="post"></form>
+      <form action="removeUsers.php" method="post"></form>
+      <form action="addDoor.php" method="post"></form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const clearPasswordBtn = document.getElementById("clear-password-btn");
+  const passwordField = document.getElementById("password");
+
+  clearPasswordBtn.addEventListener("click", () => {
+    passwordField.value = "";
+  });
+</script>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Homepage</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <a class="navbar-brand" href="#">Home Page</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../setup/setup.php">Setup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="createDb.php">Create DataBase</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="containers">
+      <div class="row row-cols-md-3 p-2 mb-3 text-center">
+        <form action="addUsers.php" method="post">
+          <!-- USER Voornaam AND Achternaam -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group">
+              <input
+                required
+                type="text"
+                name="voornaam"
+                placeholder="Voornaam"
+                aria-label="Voornaam"
+                class="form-control"
+              />
+              <input
+                required
+                type="text"
+                name="achternaam"
+                placeholder="Achternaam"
+                aria-label="Achternaam"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <!-- USER Voornaam AND Achternaam-->
+
+          <!-- USERNAME TEXT FIELD -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input
+                required
+                type="text"
+                class="form-control"
+                name="username"
+                placeholder="Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <!-- USERNAME TEXT FIELD -->
+
+          <!-- USER PASSWORD TEXT FIELD -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group mb-3">
+              <input
+                required
+                type="number"
+                class="form-control"
+                name="password"
+                id="password"
+                maxlength="10"
+                placeholder="Password (Max 10 Digits)"
+                aria-label="Password"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-danger"
+                type="button"
+                id="clear-password-btn"
+              >
+                reset
+              </button>
+            </div>
+          </div>
+          <!-- USER PASSWORD TEXT FIELD -->
+
+          <!-- TOO DO -->
+          <!-- CONFIRM USER PASSWORD TEXT FIELD
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group mb-3">
+              <input required
+                type="number"
+                class="form-control"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Button
+              </button>
+            </div>
+          </div>
+         CONFIRM USER PASSWORD TEXT FIELD -->
+          <!-- TOO DO -->
+
+          <!-- USER RANK-->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group">
+              <select
+                class="form-select"
+                name="rank"
+                id="input requiredGroupSelect04"
+                aria-label="Example select with button addon"
+              >
+                <option selected>Choose User Rank...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+              </select>
+            </div>
+          </div>
+          <!-- USER RANK-->
+
+          <!-- SUBMITE BUTTON-->
+          <div class="col mb-1 themed-grid-col">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-success" type="submit">
+                Add User
+              </button>
+            </div>
+          </div>
+          <!-- SUBMITE BUTTON-->
+        </form>
+
+        <form action="removeUsers.php" method="post">
+          <!-- USER Voornaam en Achternaam -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group">
+              <input
+                required
+                type="text"
+                name="voornaam"
+                aria-label="Voornaam"
+                placeholder="Voornaam"
+                class="form-control"
+              />
+              <input
+                required
+                type="text"
+                name="achternaam"
+                aria-label="Achternaam"
+                placeholder="Achternaam"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <!-- USER Voornaam en Achternaam -->
+
+          <!-- USERNAME TEXT FIELD -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input
+                required
+                type="text"
+                class="form-control"
+                name="username"
+                placeholder="Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <!-- USERNAME TEXT FIELD -->
+
+          <!-- SUBMITE BUTTON-->
+          <div class="col mb-1 themed-grid-col">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-danger" type="submit">
+                Delete User
+              </button>
+            </div>
+          </div>
+          <!-- SUBMITE BUTTON-->
+        </form>
+
+        <form action="addDoor.php" method="post">
+          <!-- deur naam TEXT FIELD -->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input
+                required
+                type="text"
+                class="form-control"
+                id="deurnaam"
+                name="deurnaam"
+                placeholder="Deur Naam"
+                aria-label="deur Naam"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <!-- deur nummer TEXT FIELD -->
+
+          <!-- DOOR RANK-->
+          <div class="col mb-1 themed-grid-col">
+            <div class="input-group">
+              <select
+                class="form-select"
+                id="input requiredGroupSelect04"
+                name="rank"
+                aria-label="Example select with button addon"
+              >
+                <option selected>Choose Doors Rank...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+              </select>
+            </div>
+          </div>
+          <!-- DOOR RANK-->
+
+          <!-- SUBMITE BUTTON-->
+          <div class="col mb-1 themed-grid-col">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-success" type="submit">
+                Add Door
+              </button>
+            </div>
+          </div>
+          <!-- SUBMITE BUTTON-->
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<script>
+  const clearPasswordBtn = document.getElementById("clear-password-btn");
+  const passwordField = document.getElementById("password");
+
+  clearPasswordBtn.addEventListener("click", () => {
+    passwordField.value = "";
+  });
+</script>
