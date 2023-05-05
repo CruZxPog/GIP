@@ -94,14 +94,8 @@
       ? decodeURIComponent(deurnaamCookie[1])
       : null;
 
-    // Get the value of the "deurrank" cookie
-    var deurrankCookie = document.cookie.match(/(?:^|;)\s*deurrank=([^;]+)/);
-    var deurrankValue = deurrankCookie
-      ? decodeURIComponent(deurrankCookie[1])
-      : null;
-
     // Use the cookie values as needed
-    console.log(deurnaamValue, deurrankValue);
+    console.log(deurnaamValue);
   }
 
   window.onload = readCookies;

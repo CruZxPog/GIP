@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="setup_style.css">
   </head>
   <body>
-    
-    <form action="../login/scramblepad.html" onsubmit="setCookies()">
+    <form action="set_qrCookies.php">
       <?php
         // Connect to the database
         $link = mysqli_connect("localhost", "root", "", "locks");
@@ -27,29 +26,32 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $option_value = $row["deur naam"];
-                $option_data1 = $row["deur naam"];
-                $option_data2 = $row["rank"];
                 $option_class = ($row["chipid"] !== "") ? "in-use" : "";
-                $options[] = array("value" => $option_value, "data_value1" => $option_data1,"data_value2" => $option_data2, "class" => $option_class);
+                $options[] = array("value" => $option_value, "class" => $option_class);
             }
         }
 
         // Generate the HTML for the dropdown menu
-        echo '<select id="select" required>';
+        echo '<select id="select" name="deurnaam" aria-label="Select your door" required>';
         echo '<option disabled selected value="">Select your door</option>'; // Add placeholder option
         foreach ($options as $option) {
-          echo '<option value="' . $option["value"] . '" class="' . $option["class"] . '" ' 
-          . 'data-value1="' . $option["data_value1"] . '" data-value2="' . $option["data_value2"] . '" '
-          . ($option["class"] ? 'disabled' : '') . '>' . $option["value"] . '</option>';
-       
+          ?>
+          <option
+            value="<?php echo $option["value"] ?>"
+            <?php echo $option["class"] ? 'class="' . $option["class"] . '"' : '' ?>
+            <?php echo $option["class"] ? 'disabled' : '' ?>
+          >
+            <?php echo $option["value"] ?>
+          </option>
+         
+          <?php
         }
         echo '</select>';
 
         // Close the database connection
         $link->close();
       ?>
-
-      <button type="button" id="submit" onclick="setCookies();">Submit</button>
+      <button type="submit" id="submit">Submit</button>
 
       <button type="button" id="generateQRCode">Generate QR Code</button>
       <div id="qr-container">
