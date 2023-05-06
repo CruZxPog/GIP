@@ -5,7 +5,7 @@
 const char* ssid = "WIFIIICT";
 const char* password = "fakatijger";
 //Your Domain name with URL path or IP address with path
-String serverName = "http://10.3.41.30/gip/gip/login/doorStatus.php";
+String serverName = "http://scramblepad.great-site.net/login/doorStatus.php";
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.

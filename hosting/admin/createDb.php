@@ -5,6 +5,7 @@ $sql_file = 'locks.sql';
 
 // Create connection
 $conn = mysqli_connect("sql104.epizy.com", "epiz_34138247", "PjAnnVCkxFqLb00", "epiz_34138247_lokcs");
+
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

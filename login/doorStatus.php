@@ -29,6 +29,9 @@ if (!empty($chipid)) {
         
     }
 } else {
-    // header('Location: scramblepad.html');
+    header('Location: scramblepad.html');
 }
+// hash passwords!!!!!
+
 ?>
+

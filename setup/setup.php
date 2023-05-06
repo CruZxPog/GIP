@@ -39,7 +39,7 @@
           <option
             value="<?php echo $option["value"] ?>"
             <?php echo $option["class"] ? 'class="' . $option["class"] . '"' : '' ?>
-            <?php echo $option["class"] ? 'disabled' : '' ?>
+            <?php // echo $option["class"] ? 'disabled' : '' ?>
           >
             <?php echo $option["value"] ?>
           </option>

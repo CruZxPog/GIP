@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($link, $sql) or die(mysqli_error($link));
     $deurrank = mysqli_fetch_array($result);
     
-    if($user_rank['rank'] >= $deurrank) {
+    if($user_rank['rank'] >= $deurrank[1]) {
         $sql = "UPDATE `doors` SET `status`='open' WHERE `deur naam`='$deurnaam_cookie'";
         $result = mysqli_query($link, $sql) or die(mysqli_error($link));
         sleep(5); // wait for 5 seconds before updating the status to close

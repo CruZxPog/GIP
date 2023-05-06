@@ -89,12 +89,13 @@
 
   function readCookies() {
     // Get the value of the "deurnaam" cookie
-    var deurnaam = decodeURIComponent(document.cookie(deurnaam));
-    console.log("deurnaam: " + deurnaam);
+    var deurnaamCookie = document.cookie.match(/(?:^|;)\s*deurnaam=([^;]+)/);
+    var deurnaamValue = deurnaamCookie
+      ? decodeURIComponent(deurnaamCookie[1])
+      : null;
 
-    // Get the value of the "deurrank" cookie
-    var deurrank = decodeURIComponent(document.cookie(deurrank));
-    console.log("deurrank: " + deurrank);
+    // Use the cookie values as needed
+    console.log(deurnaamValue);
   }
 
   window.onload = readCookies;
