@@ -19,8 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sanitized_password = mysqli_real_escape_string($link, $password);
     $sanitized_rank = mysqli_real_escape_string($link, $rank);
     
+    $hasedPwd = password_hash($sanitized_password, PASSWORD_DEFAULT);
+
     $sql = "INSERT INTO `users`(`voornaam`, `achternaam`, `username`, `password`, `rank`) 
-            VALUES ('$sanitized_voornaam','$sanitized_achternaam','$sanitized_username','$sanitized_password','$sanitized_rank')";
+            VALUES ('$sanitized_voornaam','$sanitized_achternaam','$sanitized_username','$hasedPwd','$sanitized_rank')";
     
     $result = mysqli_query($link, $sql) 
     or die(mysqli_error($link));

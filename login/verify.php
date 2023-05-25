@@ -10,7 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sanitized_username = mysqli_real_escape_string($link, $username);
     $sanitized_password = mysqli_real_escape_string($link, $password);
    
-    $sql = "SELECT `rank` FROM `users` WHERE `username`='$sanitized_username' AND `password`='$sanitized_password'";
+    $sql = "SELECT `password` FROM `users` WHERE `username` ='$sanitized_username'";
+    $result = mysqli_query($link, $sql) or die(mysqli_error($link));
+    $hasedPwd = mysqli_fetch_array($result);
+
+    $deHashedPwd = password_verify($sanitized_password,$hasedPwd['password']);
+    
+    $sql = "SELECT `rank` FROM `users` WHERE `username`='$sanitized_username' AND `password`='$deHashedPwd'";
     $result = mysqli_query($link, $sql) or die(mysqli_error($link));
     $user_rank = mysqli_fetch_array($result);
     
@@ -35,4 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     mysqli_close($link);
 }
+
+// hash passwords!!!!!
+
 ?>
