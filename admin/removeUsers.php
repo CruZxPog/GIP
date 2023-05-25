@@ -6,9 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $achternaam = $_POST['achternaam'];
     $username = $_POST['username'];
     
-    echo $voornaam."<br>".$achternaam."<br>".$username."<br>";
-
-    $sql = "DELETE FROM `users` WHERE  `voornaam`='$voornaam' and `achternaam`= '$achternaam' and `username`='$username'";
+    $sanitized_voornaam = mysqli_real_escape_string($link, $voornaam);
+    $sanitized_achternaam = mysqli_real_escape_string($link, $achternaam);
+    $sanitized_username = mysqli_real_escape_string($link, $username);
+  
+    
+    $sql = "DELETE FROM `users` WHERE  `voornaam`='$sanitized_voornaam' and `achternaam`= '$sanitized_achternaam' and `username`='$sanitized_username'";
 
     $result = mysqli_query($link, $sql) 
     or die(mysqli_error($link));

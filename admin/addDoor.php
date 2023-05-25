@@ -4,11 +4,11 @@ $link = mysqli_connect("localhost","root","","locks");
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $deurnaam = $_POST['deurnaam'];
     $deurnaam =strtolower($deurnaam);
-    
+    $sanitized_deurnaam = mysqli_real_escape_string($link, $deurnaam);
     
     $rank = $_POST['rank'];
 
-    $sql = "INSERT INTO `doors`(`deur naam`, `status`,`rank`,`chipid`) VALUES ('$deurnaam','close',$rank,'')";
+    $sql = "INSERT INTO `doors`(`deur naam`, `status`,`rank`,`chipid`) VALUES ('$sanitized_deurnaam','close',$rank,'')";
     
     $result = mysqli_query($link, $sql) 
     or die(mysqli_error($link));
