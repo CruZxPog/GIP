@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `voornaam` varchar(30) NOT NULL,
   `achternaam` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` int NOT NULL,
+  `password` longtext NOT NULL,
   `rank` varchar(30) NOT NULL
 );
 

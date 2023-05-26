@@ -5,7 +5,7 @@
 const char* ssid = "WIFIIICT";
 const char* password = "fakatijger";
 //Your Domain name with URL path or IP address with path
-String serverName = "http://10.3.41.30/gip/gip/login/doorStatus.php";
+String serverName = "http://10.3.41.20/gip/gip/login/doorStatus.php";
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
@@ -98,7 +98,6 @@ void loop() {
       } else {
         Serial.print("Error code: ");
         Serial.println(httpResponseCode);
-        ESP.restart();
       }
       // Free resources
       http.end();
