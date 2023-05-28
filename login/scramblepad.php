@@ -86,17 +86,4 @@
     shuffleArray(arr);
     getKeys();
   });
-
-  function readCookies() {
-    // Get the value of the "deurnaam" cookie
-    var deurnaamCookie = document.cookie.match(/(?:^|;)\s*deurnaam=([^;]+)/);
-    var deurnaamValue = deurnaamCookie
-      ? decodeURIComponent(deurnaamCookie[1])
-      : null;
-
-    // Use the cookie values as needed
-    console.log(deurnaamValue);
-  }
-
-  window.onload = readCookies;
 </script>

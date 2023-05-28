@@ -11,14 +11,13 @@
   <body>
     <form action="set_qrCookies.php">
       <?php
-        // Connect to the database
+        
         $link = mysqli_connect("localhost", "root", "", "locks");
 
         if ($link->connect_error) {
             die("Connection failed: " . $link->connect_error);
         }
 
-        // Query the database to get the options for the dropdown menu
         $sql = "SELECT * FROM `doors`";
         $result = $link->query($sql);
         $options = array();
@@ -31,24 +30,20 @@
             }
         }
 
-        // Generate the HTML for the dropdown menu
         echo '<select id="select" name="deurnaam" aria-label="Select your door" required>';
-        echo '<option disabled selected value="">Select your door</option>'; // Add placeholder option
+        echo '<option disabled selected value="">Select your door</option>'; 
         foreach ($options as $option) {
           ?>
           <option
             value="<?php echo $option["value"] ?>"
             <?php echo $option["class"] ? 'class="' . $option["class"] . '"' : '' ?>
-            <?php // echo $option["class"] ? 'disabled' : '' ?>
           >
             <?php echo $option["value"] ?>
           </option>
-         
           <?php
         }
         echo '</select>';
 
-        // Close the database connection
         $link->close();
       ?>
       <button type="submit" id="submit">Submit</button>

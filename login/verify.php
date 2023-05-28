@@ -34,14 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: scramblepad.php");
         exit();
     } else {
-        // Redirect the user to the scramblepad.html page
         header("Location: scramblepad.php");
         exit();
     }
 
     mysqli_close($link);
 }
-
-// hash passwords!!!!!
-
 ?>
