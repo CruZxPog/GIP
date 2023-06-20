@@ -11,8 +11,8 @@ generateQRCode.addEventListener("click", function () {
   let ipAddress = location.hostname;
   console.log("ip = ");
   console.log(ipAddress);
- 
-  let qrURL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${ipAddress}%2FGIP%2FGIP%2Flogin%2Fset_qrCookies.php%3Fdeurnaam%3D${deurnaamValue}`;
+
+  let qrURL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${ipAddress}%2FGIP%2FGIP%2Fsetup%2Fset_qrCookies.php%3Fdeurnaam%3D${deurnaamValue}`;
   let qrImage = document.createElement("img");
   qrImage.src = qrURL;
 
