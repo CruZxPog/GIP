@@ -31,5 +31,3 @@ if (!empty($chipid)) {
 } else {
     header('Location: scramblepad.html');
 }
-?>
-

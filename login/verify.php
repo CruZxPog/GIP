@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `doors` SET `status`='close' WHERE `deur naam`='$deurnaam_cookie'";
         $result = mysqli_query($link, $sql) or die(mysqli_error($link));
         sleep(3);
-        header("Location: scramblepad.php");
+        header("Location: scramblepad.html");
         exit();
     } else {
-        header("Location: scramblepad.php");
+        header("Location: scramblepad.html");
         exit();
     }
 
