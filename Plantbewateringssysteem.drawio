@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0" version="26.0.11">
   <diagram name="Page-1" id="crjWT-zu2yd3MlbxviBJ">
-    <mxGraphModel dx="2175" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2444" dy="2005" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -183,6 +183,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-53" target="qKud7y2XaxuHcWD2_8YC-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="qKud7y2XaxuHcWD2_8YC-53" value="Technieker" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="-70" y="250" width="30" height="60" as="geometry" />
         </mxCell>
@@ -202,6 +205,31 @@
         </mxCell>
         <mxCell id="qKud7y2XaxuHcWD2_8YC-75" value="Kan elke component&amp;nbsp;&lt;div&gt;fysiek beheren of&amp;nbsp;&lt;/div&gt;&lt;div&gt;aanpassen /configurenren&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-40.003581888890764" y="459.99514703175544" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.998;exitY=0.592;exitDx=0;exitDy=0;entryX=0.977;entryY=0.046;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-76" target="qKud7y2XaxuHcWD2_8YC-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="-75" as="sourcePoint" />
+            <mxPoint x="525" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="395" y="-65" />
+              <mxPoint x="520" y="-65" />
+              <mxPoint x="520" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-82" value="Configuratie +&lt;div&gt;code opladen&lt;/div&gt;&lt;div&gt;(usb-c)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qKud7y2XaxuHcWD2_8YC-78">
+          <mxGeometry x="-0.1735" y="-2" relative="1" as="geometry">
+            <mxPoint y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-76" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="180" y="-130" width="215" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-79" value="LAPTOP" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="-130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-80" value="VS CODE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="227.5" y="-95" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
