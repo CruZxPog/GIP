@@ -1,9 +1,118 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0" version="26.0.11">
   <diagram name="Page-1" id="crjWT-zu2yd3MlbxviBJ">
-    <mxGraphModel>
+    <mxGraphModel dx="837" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="460" y="490" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry y="175" width="400" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-8" value="&lt;div&gt;BATTERIJ&lt;/div&gt;VOEDING (3.3V)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-9" target="qKud7y2XaxuHcWD2_8YC-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-39" value="Digitale PIN(write)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qKud7y2XaxuHcWD2_8YC-38">
+          <mxGeometry x="-0.1145" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="369.9999999999999" as="sourcePoint" />
+            <mxPoint x="510" y="564.9999999999999" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="380" />
+              <mxPoint x="370" y="380" />
+              <mxPoint x="370" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-42" value="voeding" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qKud7y2XaxuHcWD2_8YC-41">
+          <mxGeometry x="0.4165" y="2" relative="1" as="geometry">
+            <mxPoint x="-22" y="-103" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-9" value="FireBeetle ESP32&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-10" value="Temperatuursensor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="460" y="180" width="180" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-13" value="BLOEMPOT" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-16" value="Resistieve BVH&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sensor&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="496" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-17" value="Capacitatieve BVH&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sensor&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="496" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-8" target="qKud7y2XaxuHcWD2_8YC-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="350" as="sourcePoint" />
+            <mxPoint x="470" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-19" value="Digitale PIN (lib name)" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-10" target="qKud7y2XaxuHcWD2_8YC-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="350" as="sourcePoint" />
+            <mxPoint x="220" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-20" value="analoge PIN&lt;div&gt;(analogRead())&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-9" target="qKud7y2XaxuHcWD2_8YC-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="360" as="sourcePoint" />
+            <mxPoint x="230" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-9" target="qKud7y2XaxuHcWD2_8YC-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="370" as="sourcePoint" />
+            <mxPoint x="240" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-22" value="analoge PIN&lt;div&gt;(analogRead())&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qKud7y2XaxuHcWD2_8YC-21">
+          <mxGeometry x="-0.1695" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-27" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-28" value="WATERDICHTE&lt;div&gt;BEHUIZING&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-31" value="Waterpomp" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-33" value="WATERRESERVOIR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="500" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-35" value="WATERSLANG" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-31" target="qKud7y2XaxuHcWD2_8YC-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="430" as="sourcePoint" />
+            <mxPoint x="560" y="410.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="qKud7y2XaxuHcWD2_8YC-37" target="qKud7y2XaxuHcWD2_8YC-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-45" value="Aansluiting&lt;div&gt;(aan/uit)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qKud7y2XaxuHcWD2_8YC-40">
+          <mxGeometry x="-0.1658" y="1" relative="1" as="geometry">
+            <mxPoint x="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qKud7y2XaxuHcWD2_8YC-37" value="RELAIS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
